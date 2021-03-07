@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from . import models , forms
 from django.http import HttpResponse
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
 def home (request):
@@ -99,3 +100,24 @@ def ostads_videos_upload (request):
 
 def ostads_videos_seen (reauest , videoid):
     return render(reauest, 'users/ostads_videos_seen.html',{'video':models.Videos.objects.get(id=videoid)})
+
+
+
+def user_login(request):
+    if request.method == 'POST':
+       
+        username = request.POST['username']
+        password = request.POST['password']
+       
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            
+            login(request, user)
+            
+            return render(request, 'users/account.html')
+        else:
+            
+            return render(request, 'users/login.html', {'error_message': 'Incorrect username and / or password.'})
+    else:
+        
+        return render(request, 'users/login.html')

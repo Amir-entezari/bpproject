@@ -5,11 +5,11 @@
 </head>
 
 <body>
-            <h1> studens.videos</h1>
+            <h1> video haye ostad</h1>
             
             
               <p  wigth = '100%'>
-              <ol style="background : pink">
+              <ol >
                 {% for video in videos %}
                     
                       <li> <a href="{% url 'ostads_videos_seen' video.id %}" > {{video.name}} </a> </li>

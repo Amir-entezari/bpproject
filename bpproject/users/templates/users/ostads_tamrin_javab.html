@@ -7,11 +7,11 @@
 </head>
 
 <body>
-<h1>javab</h1>
-        <table style="background:black" boarder="10">
+<h1>javab haye daneshjoyan</h1>
+        <table style="background:rgb(184, 184, 184)" boarder="10">
 
 
-            <tr style="background:rgb(255, 230, 0)">
+            <tr style="background:rgb(114, 114, 114)">
                 <td>student number</td>
                 <td>date</td>
                 <td>file</td>
@@ -19,7 +19,7 @@
             </tr>
                     
          {% for j in javab %}       
-            <tr style="background:pink">
+            <tr >
                 <td>{{ j.number }}</td>
                 <td>{{ j.deadline }}</td>
                 <td><a href="/{{j.file}}" > download </a></td>

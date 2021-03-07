@@ -40,12 +40,10 @@ def ostads_tamrin (request):
 
 
 
-def ostads_tamrin_javab (request,answer_id):
-    #answer = models.Answers.objects.filter(id = answer_id)
-    #contex ={'answers' : answer}
-    javab=models.Javab.objects.filter(tMRIN=models.Tamrin.objects.get(id=javab_id))
-    #answers=models.Exercise.objects.get(id =answer_id)
-    #answers = models.Answers.objects.filter(id=answer_id)
+def ostads_tamrin_javab (request,javab_id):
+
+    javab=models.Javab.objects.filter(tamrin=models.Tamrin.objects.get(id=javab_id))
+  
     contex={'javab':javab}
     return render (request , 'users/ostads_tamrin_javab.html' , contex)
 
@@ -56,6 +54,19 @@ def ostads_videos (request):
 
     return render (request , 'users/ostads_videos.html' , contex)
 
+
+def student_tamrin_upload (request):
+    form = forms.student_tamrin_upload
+    if request.method == 'POST':
+        form = forms.student_tamrin_upload(request.POST , request.FILES)
+        if form.is_valid ():
+            form.save()
+            return HttpResponse ("tamrin ba movafaghiat upload shod")
+
+    contex ={'form' : form}
+
+
+    return render (request , 'users/ostads_tamrin_upload.html' , contex)
 
 def ostads_tamrin_upload (request):
     form = forms.Ostads_tamrin_upload

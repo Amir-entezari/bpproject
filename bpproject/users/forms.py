@@ -15,7 +15,7 @@ class Ostads_tamrin_upload (ModelForm):
         fields = '__all__'
 
 
-class Javab (ModelForm):
+class student_tamrin_upload (ModelForm):
     class Meta:
         model = models.Javab
         fields = ['tamrin','number','file']

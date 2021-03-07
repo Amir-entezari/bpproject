@@ -1,4 +1,3 @@
-
 <html>
 
 <head>
@@ -6,11 +5,12 @@
 </head>
 
 <body>
-            <h1> students.tamrin</h1>
-            
-            <h2 style ="background:rgb(0, 217, 255) ; color : rgb(0, 0, 99)">  <a href="#" >upload <a> </h2>
+            <h1> students--safhe tamrin ha</h1>
+            <h5 >  <a href="{% url 'home' %}"  >>>home <a> </h5>
+            <h2 >  <a href="{% url 'student_tamrin_upload' %}"  >upload javabe tamrin(Click): <a> </h2>
+            <h3> tamrin haye upload shode osrad:</h3>
               <p  wigth = '100%'>
-              <ol style="background : rgb(0, 153, 255)">
+              <ol >
                 {% for file in tamrin %}
                     
                       <li> <a href="/{{file.file}}" >{{ file.name }} <a> </li>

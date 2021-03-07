@@ -3,17 +3,18 @@
 <html>
 
 <head>
-  <title>ostads.videos.upload</title>
+  <title>teachers.videos.upload</title>
 </head>
 
 <body>
-    <h2>upload</h2>
+    <h2>upload video jadid:</h2>
+    <h5 >  <a href="{% url 'home' %}"  >>>home <a> </h5>
     <form action="" method="POST" enctype="multipart/form-data">
        {% csrf_token %}
        {{form}}
        <br />
        <br />
-       <input type ="submit" style ="color:rgb(0, 47, 255)" value="submit">
+       <input type ="submit" style ="color:blue" value="submit">
     </form>
 </body>
 

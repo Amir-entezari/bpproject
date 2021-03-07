@@ -1,23 +1,24 @@
 
 <html>
 
-<head>
-  <title>ostads_tamrin</title>
-</head>
-
-<body>
-            <h1> ostads.tamrin</h1>
-            
-            <h2 style ="background:rgb(0, 107, 247) ; color : rgb(204, 176, 15)">  <a href="{% url 'ostads_tamrin_upload' %}" >upload <a> </h2>
-              <p  wigth = '100%'>
-              <ol style="background : rgb(255, 0, 0)">
-                {% for file in tamrin %}
-                    
-                      <li> <a href="{% url 'ostads_tamrin_javab' file.id %}" >{{ file.name }} <a> </li>
-                    
-                {% endfor %}
-              </ol>
-              </p>
-</body>
-
-</html>
+  <head>
+    <title>ostads_tamrin</title>
+  </head>
+  
+  <body>
+              <h1> ostad---safhe tamrin ha </h1>
+              <h5 >  <a href="{% url 'home' %}"  >>>home <a> </h5>
+              <h2 >  <a href="{% url 'ostads_tamrin_upload' %}" >1-upload tamrin jadid: <a> </h2>
+              <h3><br/>2-tamrin haye upload shode:</h3>
+                <p  wigth = '100%'>
+                <ol >
+                  {% for file in tamrin %}
+                      
+                        <li> <a href="{% url 'ostads_tamrin_javab' file.id %}" >{{ file.name }} <a> </li>
+                      
+                  {% endfor %}
+                </ol>
+                </p>
+  </body>
+  
+  </html>

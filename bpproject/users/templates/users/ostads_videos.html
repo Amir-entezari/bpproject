@@ -1,0 +1,23 @@
+
+<html>
+
+<head>
+  <title>ostads_videos</title>
+</head>
+
+<body>
+            <h1> teachrs.videos</h1>
+            
+            <h2 style ="background:rgb(0, 68, 255) ; color : rgb(0, 204, 255)">  <a href="{% url 'ostads_videos_upload' %}" >upload <a> </h2>
+              <p  wigth = '100%'>
+              <ol style="background : rgb(0, 20, 85)">
+                {% for video in videos %}
+                    
+                      <li> <a href="{% url 'ostads_videos_seen' video.id %}" > {{video.name}} </a> </li>
+                    
+                {% endfor %}
+              </ol>
+              </p>
+</body>
+
+</html>

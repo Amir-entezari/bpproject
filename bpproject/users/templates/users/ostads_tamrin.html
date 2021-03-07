@@ -1,0 +1,23 @@
+
+<html>
+
+<head>
+  <title>ostads_tamrin</title>
+</head>
+
+<body>
+            <h1> ostads.tamrin</h1>
+            
+            <h2 style ="background:rgb(0, 107, 247) ; color : rgb(204, 176, 15)">  <a href="{% url 'ostads_tamrin_upload' %}" >upload <a> </h2>
+              <p  wigth = '100%'>
+              <ol style="background : rgb(255, 0, 0)">
+                {% for file in tamrin %}
+                    
+                      <li> <a href="{% url 'ostads_tamrin_javab' file.id %}" >{{ file.name }} <a> </li>
+                    
+                {% endfor %}
+              </ol>
+              </p>
+</body>
+
+</html>

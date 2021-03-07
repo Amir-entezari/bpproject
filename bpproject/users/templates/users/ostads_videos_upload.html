@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>ostads.videos.upload</title>
+</head>
+
+<body>
+    <h2>upload</h2>
+    <form action="" method="POST" enctype="multipart/form-data">
+       {% csrf_token %}
+       {{form}}
+       <br />
+       <br />
+       <input type ="submit" style ="color:rgb(0, 47, 255)" value="submit">
+    </form>
+</body>
+
+</html> 

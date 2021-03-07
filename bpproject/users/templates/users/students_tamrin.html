@@ -1,0 +1,23 @@
+
+<html>
+
+<head>
+  <title>students_tamrin</title>
+</head>
+
+<body>
+            <h1> students.tamrin</h1>
+            
+            <h2 style ="background:rgb(0, 217, 255) ; color : rgb(0, 0, 99)">  <a href="#" >upload <a> </h2>
+              <p  wigth = '100%'>
+              <ol style="background : rgb(0, 153, 255)">
+                {% for file in tamrin %}
+                    
+                      <li> <a href="/{{file.file}}" >{{ file.name }} <a> </li>
+                    
+                {% endfor %}
+              </ol>
+              </p>
+</body>
+
+</html>

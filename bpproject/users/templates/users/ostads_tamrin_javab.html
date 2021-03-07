@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>students javab</title>
+</head>
+
+<body>
+<h1>javab</h1>
+        <table style="background:black" boarder="10">
+
+
+            <tr style="background:rgb(255, 230, 0)">
+                <td>student number</td>
+                <td>date</td>
+                <td>file</td>
+                <td>max=100</td>
+            </tr>
+                    
+         {% for j in javab %}       
+            <tr style="background:pink">
+                <td>{{ j.number }}</td>
+                <td>{{ j.deadline }}</td>
+                <td><a href="/{{j.file}}" > download </a></td>
+                <td>{{ j.vote }}</td>
+            </tr>
+        {% endfor %}
+
+        </table>
+</body>
+
+</html>
+
